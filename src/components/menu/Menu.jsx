@@ -2,16 +2,16 @@ import { useEffect, useRef , useState} from "react";
 import "./Menu.scss";
 
 //svg
-import { ReactComponent as Logo } from "../assets/logo.svg";
-import { ReactComponent as Category } from "../assets/category.svg";
-import { ReactComponent as Ticket } from "../assets/ticket.svg";
-import { ReactComponent as Wallet } from "../assets/wallet.svg";
-import { ReactComponent as Stat } from "../assets/stat.svg";
-import { ReactComponent as Moon } from "../assets/moon.svg";
-import { ReactComponent as Exit } from "../assets/exit.svg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { ReactComponent as Category } from "../../assets/category.svg";
+import { ReactComponent as Ticket } from "../../assets/ticket.svg";
+import { ReactComponent as Wallet } from "../../assets/wallet.svg";
+import { ReactComponent as Stat } from "../../assets/stat.svg";
+import { ReactComponent as Moon } from "../../assets/moon.svg";
+import { ReactComponent as Exit } from "../../assets/exit.svg";
 
 //img
-import arb from "../assets/arb.png"
+import arb from "../../assets/arb.png"
 
 export default function Menu(){
 

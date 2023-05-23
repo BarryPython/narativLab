@@ -21,6 +21,11 @@ $huge : 44px;
     flex-direction: row;
 }
 
+.main{
+    width: 100%;
+    margin-left: 32px;
+}
+
 body {
     padding: 30px;
     width: calc(100vw - (2* 30px));
@@ -109,6 +114,8 @@ h2{
     font-weight: 700;
     font-size: 22px;
     line-height: 33px;
+    padding: 0;
+    margin: 0;
 }
 p{
     font-family: 'Poppins';
@@ -116,6 +123,8 @@ p{
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    padding: 0;
+    margin: 0;
     
     strong{
         font-weight: 600;
@@ -124,15 +133,43 @@ p{
 
 .tile{
     display: flex;
+    flex-direction: column;
     padding: 30px;
     border-radius: $radius;
     background-color: $white;
     overflow: hidden;
 
+    &.w-25{
+        width: calc(25% - (30px *2));
+    }
+    &.w-50{
+        width: calc(50% - (30px *2));
+    }
+    &.w-75{
+        width: calc(75% - (30px *2));
+    }
+    &.w-100{
+        width: calc(100% - (30px *2));
+    }
+
+    .row{
+        gap: 34px ;
+    }
+
     .content{
         background-color: $grey;
         border-radius: $radius;
         overflow: hidden;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: fit-content;
+        gap: 13px;
+        margin-bottom: 17px;
     }
 }
 
@@ -187,14 +224,21 @@ p{
     width: 50%;
 }
 .w-75{
-    width: 50%;
+    width: 75%;
 }
 .w-100{
-    width: 50%;
+    width: 100%;
 }
+
 .column{
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .row{
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
