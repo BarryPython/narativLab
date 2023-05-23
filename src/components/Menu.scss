@@ -45,9 +45,9 @@ nav{
             max-width: 250px;
 
             transition: max-width 0.5s;
-            transition: gap 0.1s 0.5s ;
     
             svg{
+                min-width: 24px;
                 width: 24px;
                 *{
                     stroke: $subtle !important;
@@ -118,7 +118,7 @@ nav{
         }
     }
 
-    &.collapsed{
+    &:not(:hover){
         width: calc(133px - ($padding-w * 2));
         justify-content: center;
         align-items: center;
@@ -133,7 +133,6 @@ nav{
                 justify-content: flex-start;
                 align-items: center;
                 padding: 0;
-                gap :0;
 
                 > p{
                     max-width: 0px;
