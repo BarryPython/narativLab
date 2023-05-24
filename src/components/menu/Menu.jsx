@@ -1,5 +1,5 @@
-import { useEffect, useRef , useState} from "react";
 import "./Menu.scss";
+import { useState } from "react";
 
 //svg
 import { ReactComponent as Logo } from "../../assets/logo.svg";
@@ -9,36 +9,24 @@ import { ReactComponent as Wallet } from "../../assets/wallet.svg";
 import { ReactComponent as Stat } from "../../assets/stat.svg";
 import { ReactComponent as Moon } from "../../assets/moon.svg";
 import { ReactComponent as Exit } from "../../assets/exit.svg";
+import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
 
 //img
 import arb from "../../assets/arb.png"
 
 export default function Menu(){
 
-    const menu = useRef(null)
-    const [entered, setEntered] = useState(false);
-
-    function onEnter() {
-        setEntered(true);
-      }
-
-    function onLeave(){
-        menu.current.classList.add("collapsed");
-        setEntered(false);
-    }
-
-    useEffect(()=>{
-        setTimeout(() => {
-            if (entered) {
-                menu.current.classList.remove("collapsed");
-            }
-        }, 1000);
-    },[entered])
+    const [subMenu, setSubMenu] = useState(true);
 
     return(
-        <nav className="collapsed" ref={menu}
-            onMouseEnter={onEnter}
-            onMouseLeave={onLeave}
+        <>
+        <div className="mobile-only topBar">
+            <Logo className="logo"/>
+            <button className="little" onClick={()=>{setSubMenu(!subMenu)}}>
+                <MenuIcon />
+            </button>
+        </div>
+        <nav className={subMenu ? "collapsed" : ""}
         >
             <Logo className="logo"/>
             <div className="link-list">
@@ -71,6 +59,20 @@ export default function Menu(){
                     <Exit />
                 </button>
             </div>
+            <div className="mobile-only coins-container">
+                <p style={{marginLeft : "6px"}}>
+                    <strong>
+                    NRT / USDC
+                    </strong>
+                </p>
+                <p style={{marginLeft : "56px"}}>
+                    <strong>
+                    $2.46
+                    </strong>
+                </p>
+                <button style={{marginLeft : "31px", height : "37px"}} className="primary fit">Swap</button>
+            </div>
         </nav>
+        </>
     )
 }

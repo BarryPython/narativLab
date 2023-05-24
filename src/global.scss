@@ -1,19 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 @import "./variables.scss";
 
+.mobile-only{
+    display: none !important;
+
+    @media only screen and (max-width: 1000px){
+        display: flex !important;
+    }
+}
+
+.desktop-only{
+    display: flex !important;
+
+    @media only screen and (max-width: 1000px){
+        display: none !important;
+    }
+}
+
 #root{
     width: 100%;
     height: 100%;
 
     display: flex;
     flex-direction: row;
+
+    @media only screen and (max-width: 1000px){
+        flex-direction: column;
+    }
 }
 
 .main{
-    width: 100%;
     margin-left: 32px;
     max-height: 100%;
     overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1000px){
+        margin: 0;
+    }
+
+    :-webkit-scrollbar {
+        display: none;
+      }
 }
 
 .app{
@@ -23,6 +54,8 @@
     justify-content: space-between;
     align-items: center;
     gap: $main-gap;
+
+    
 }
 
 body {
@@ -265,17 +298,19 @@ p{
     }
 }
 
-.w-25{
-    width: 25%;
-}
-.w-50{
-    width: 50%;
-}
-.w-75{
-    width: 75%;
-}
-.w-100{
-    width: 100%;
+@media only screen and (min-width: 1000px){
+    .w-25{
+        width: 25%;
+    }
+    .w-50{
+        width: 50%;
+    }
+    .w-75{
+        width: 75%;
+    }
+    .w-100{
+        width: 100%;
+    }
 }
 
 .column{
@@ -289,4 +324,8 @@ p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: 1000px){
+        flex-direction: column;
+    }
 }
