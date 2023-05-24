@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import "../../variables.scss";
 
 .solde{
     height: 200px;
@@ -98,4 +98,33 @@
             justify-content: space-between;
         }
     }
+}
+
+.activity{
+    display: flex;
+    flex-direction: column;
+    max-height: 38px;
+
+    span{
+        display: flex;
+    }
+}
+
+.logo-inversed{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+    svg{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.stat-content{
+    max-height: 200px;
 }

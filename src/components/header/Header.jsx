@@ -12,7 +12,7 @@ export default function Header(){
 
     return (
         <div className="header-container">
-            <h1>{getTitle()}</h1>
+            <h1>{getTitle().replace('-'," ")}</h1>
             <div className="coins-container">
                 <div>
                     <p style={{marginLeft : "6px"}}>

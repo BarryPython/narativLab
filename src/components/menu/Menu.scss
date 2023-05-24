@@ -1,11 +1,11 @@
-@import "../../global.scss";
+@import "../../variables.scss";
 
 nav{
     $padding-w: 30px;
     width: calc(280px + (30px));
     border-radius: calc(2*$radius);
     background-color: $white;
-    height: calc(100% - (39px *2));
+    height: 80%;
 
     display: flex;
     flex-direction: column;
