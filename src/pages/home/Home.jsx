@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Home.scss"
+// eslint-disable-next-line
+import { Chart as ChartJS } from 'chart.js/auto'
 import { Line } from 'react-chartjs-2';
 
 //svg
