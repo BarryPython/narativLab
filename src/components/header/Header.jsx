@@ -1,5 +1,9 @@
 import "./Header.scss";
 
+//svg 
+
+import { ReactComponent as Arrow } from "../../assets/arrow.svg";
+
 export default function Header(){
 
     const adress = "0x9D3256bd9404f3E86a7C5D1BACA69847cC77f62E"
@@ -12,6 +16,9 @@ export default function Header(){
 
     return (
         <div className="header-container">
+            <button className="back" onClick={()=>{window.history.back()}}>
+                <Arrow />
+            </button>
             <h1>{getTitle().replace('-'," ")}</h1>
             <div className="coins-container desktop-only">
                 <div>
