@@ -16,7 +16,7 @@ nav{
     width: calc(280px + (30px));
     border-radius: calc(2*$radius);
     background-color: $white;
-    height: 80%;
+    height: calc(100% - (2* 60px));
 
     display: flex;
     flex-direction: column;

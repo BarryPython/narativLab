@@ -7,6 +7,7 @@ import { Line } from 'react-chartjs-2';
 //svg
 import { ReactComponent as Info } from "../../assets/info.svg";
 import { ReactComponent as LogoInversed } from "../../assets/logo_inversed.svg";
+import { ReactComponent as Unicorn } from "../../assets/unicorn.svg";
 
 //images
 import card from "../../assets/card.png";
@@ -128,11 +129,14 @@ function Home() {
       </section>
       <div className='row' style={{width : "100%", gap : "30px", alignItems: "stretch"}}>
         <div className='tile w-100' style={{flexGrow: 1}}>
-          <div className='title'>
+          <div className='title' style={{width : "100%", justifyContent : "flex-start"}}>
               <span className='logo-inversed'>
                 <LogoInversed />
               </span>
             <h2>NRT - $2.46</h2>
+            <button className='' style={{marginLeft : "auto", padding : "10px", width: "fit-content"}}>
+              <Unicorn />
+            </button>
           </div>
           <div className='content'>
             <div className='chart-content'>
