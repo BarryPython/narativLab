@@ -162,6 +162,23 @@ table{
 
             &:nth-child(3){
                 text-align: right;
+                font-weight: 600;
+
+                &::first-letter{
+                    text-transform: capitalize;
+                }
+            }
+
+            &.pending{
+                color: rgb(233, 166, 11);
+            }
+
+            &.success{
+                color: $green;
+            }
+
+            &.failed{
+                color: $red;
             }
         }
     }

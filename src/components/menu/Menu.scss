@@ -12,6 +12,7 @@
 
 nav{
     $padding-w: 30px;
+    max-width: calc(280px + (30px));
     width: calc(280px + (30px));
     border-radius: calc(2*$radius);
     background-color: $white;
@@ -20,7 +21,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding: 39px $padding-w;
     padding-top: 39px;
     padding-bottom: 39px;
@@ -53,6 +54,7 @@ nav{
     .link-list{
         width: 100%;
         margin-bottom: auto;
+        margin-right: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -160,13 +162,14 @@ nav{
     }
     @media only screen and (min-width: 1000px){
         &:not(:hover){
-        width: calc(133px - ($padding-w * 2));
+        max-width: calc(133px - ($padding-w * 2));
         justify-content: center;
         align-items: center;
 
         .link-list{
             justify-content: center;
             align-items: center;
+            margin-left: auto;
 
             .link{
                 max-width: 46px;

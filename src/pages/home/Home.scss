@@ -128,3 +128,24 @@
 .stat-content{
     max-height: 200px;
 }
+
+.chart-content{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+
+    canvas{
+        transform: scale(1.02);
+    }
+
+    &:after {
+        position: absolute;
+        content:"";
+        height:100%;
+        width:100%;
+        top:0;
+        left:0;
+        background: linear-gradient(to bottom, rgba(255,0,0,0) 50%,$grey 100%);
+    }
+}

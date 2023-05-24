@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Home.scss"
-import ReactEcharts from "echarts-for-react"; 
+import { Chart as ChartJS } from 'chart.js/auto'
+import { Line } from 'react-chartjs-2';
 
 //svg
 import { ReactComponent as Info } from "../../assets/info.svg";
@@ -21,72 +22,64 @@ function Home() {
     {
       action : "Claim Profits",
       amount : "950",
-      status : "/"
+      status : "pending"
     },
     {
       action : "Claim Profits",
       amount : "2600",
-      status : "Success"
+      status : "success"
     },
     {
       action : "Investment",
       amount : "600",
-      status : "Success"
+      status : "success"
     },
     {
       action : "Investment",
       amount : "600",
-      status : "Success"
+      status : "success"
     }
   ]
 
-  const option = {
-    /*tooltip: {
-      triggerOn : "mousemove",
-      trigger: 'axis',
-      backgroundColor : "#7EE48C",
-      position: function (pt) {
-        return [pt[0], '10%'];
-      },
-      formatter: '{c0}'
-    },*/
-    color: "#7EE48C",
-    grid : {
-      width : "100%",
-      height: "140px",
-      left: 0,
-    },
-    xAxis: {
-      type: 'value',
-      show : false,
-      min: function (value) {
-        return value.min;
-      },
-      max: function (value) {
-        return value.max;
+  let options = {
+    maintainAspectRatio : false,
+    responsive: true,
+    plugins: {
+      legend: {
+          display : false,
       }
     },
-    yAxis: {
-      show : false,
-      type: 'value',
-      min: function (value) {
-        return value.min;
-      },
-      max: function (value) {
-        return value.max;
+    animations: {
+      tension: {
+        duration: 1000,
+        easing: 'linear',
+        from: 0,
+        to: 0.3,
+        loop: false
       }
     },
-    series: [
+    scales: {
+      y : {
+          display : false,
+      }, 
+      x : {
+          display : false,
+      }
+    }
+  }
+
+  let data = {
+    labels : [0,1,2,3,4,5,6,7,8,9,10,11,12],
+    datasets : [
       {
-        data: [[0, 12], [1, 13], [2, 0], [4, 15], [5, 7], [6, 22], [8, 10], [9, 1], [11, 14], [16, 20], [17, 18], [19, 25], [21, 26], [23, 27]],
-        type: 'line',
-        animation : false,
-        areaStyle: {
-          color : "#7EE48C"
-        }
-      }
+        fill : true,
+        borderColor : "#7ee48c",
+        backgroundColor : "#c9f7d0",
+        label : "lala",
+        data : [1,2,4,8,5,5,6,7,5,8,2,0,4,6,11]
+      },
     ]
-  }; 
+  }
 
   return (
     <>
@@ -140,8 +133,10 @@ function Home() {
               </span>
             <h2>NRT - $2.46</h2>
           </div>
-          <div className='content stat-content'>
-            <ReactEcharts option={option} />
+          <div className='content'>
+            <div className='chart-content'>
+              <Line options={options} data={data} />
+            </div>
           </div>
         </div>
         <div className='tile w-100' style={{flexGrow: 1}}>
@@ -163,7 +158,7 @@ function Home() {
                 <tr key={Math.random()}>
                   <td>{activity.action}</td>
                   <td>${activity.amount}</td>
-                  <td>{activity.status}</td>
+                  <td className={activity.status}>{activity.status}</td>
                 </tr>
               )
             })}
