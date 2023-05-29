@@ -19,7 +19,7 @@ export default function Header(){
             <button className="back" onClick={()=>{window.history.back()}}>
                 <Arrow />
             </button>
-            <h1>{getTitle().replace('-'," ")}</h1>
+            <h1>{getTitle().replaceAll('-'," ").replaceAll('|',"/")}</h1>
             <div className="coins-container desktop-only">
                 <div>
                     <p style={{marginLeft : "6px"}}>

@@ -18,6 +18,12 @@ export default function Menu(){
 
     const [subMenu, setSubMenu] = useState(true);
 
+    function getTitle(){
+        const search = window.location.pathname.split('/').pop();
+        if (search === "") return "dashboard";
+        return search;
+    }
+
     return(
         <>
         <div className="mobile-only topBar">
@@ -30,11 +36,11 @@ export default function Menu(){
         >
             <Logo className="logo"/>
             <div className="link-list">
-                <a className="link active" href="/">
+                <a className={"link " + (getTitle() === "dashboard" ? "active" : "")} href="/">
                     <Category />
                     <p>Dashboard</p>
                 </a>
-                <a className="link" href="/">
+                <a className={"link " + (getTitle() === "Staking-|-Tickets" ? "active" : "")} href="Staking-|-Tickets">
                     <Ticket />
                     <p>Staking / Tickets</p>
                 </a>
