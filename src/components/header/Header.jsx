@@ -16,9 +16,12 @@ export default function Header(){
 
     return (
         <div className="header-container">
-            <button className="back" onClick={()=>{window.history.back()}}>
-                <Arrow />
-            </button>
+            {
+                getTitle() === "dashboard" ? null : 
+                <button className="back" onClick={()=>{window.history.back()}}>
+                    <Arrow />
+                </button>
+            }
             <h1>{getTitle().replaceAll('-'," ").replaceAll('|',"/")}</h1>
             <div className="coins-container desktop-only">
                 <div>
