@@ -5,10 +5,12 @@ import Menu from "./components/menu/Menu";
 import MyActivity from "./pages/my-activity/MyActivity";
 import Header from "./components/header/Header";
 import "./global.scss";
+import PopupManager from "./components/popup_manager/PopupManager";
 
 function App() {
   return (
     <>
+      <PopupManager/>
       <Menu/>
       <div className="main">
         <Header/>

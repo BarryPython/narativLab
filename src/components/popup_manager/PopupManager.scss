@@ -1,0 +1,36 @@
+.beta-popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border-radius: 4px;
+        padding: 13px;
+    }
+
+    p{
+        text-align: center;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 500px;
+    }
+    
+    > div{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+
+        button{
+            width: 100%;
+        }
+    }
+}
