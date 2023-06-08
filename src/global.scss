@@ -227,6 +227,9 @@ p{
     &.w-25{
         width: calc(25% - (30px *2));
     }
+    &.w-40{
+        width: calc(40% - (30px *2));
+    }
     &.w-50{
         width: calc(50% - (30px *2));
     }
@@ -235,6 +238,23 @@ p{
     }
     &.w-100{
         width: calc(100% - (30px *2));
+    }
+    @media only screen and (max-width: 1000px){
+        &.w-25{
+            width: calc(100% - (30px *2));
+        }
+        &.w-40{
+            width: calc(100% - (30px *2));
+        }
+        &.w-50{
+            width: calc(100% - (30px *2));
+        }
+        &.w-75{
+            width: calc(100% - (30px *2));
+        }
+        &.w-100{
+            width: calc(100% - (30px *2));
+        }
     }
 
     .row{
@@ -245,6 +265,32 @@ p{
         background-color: $grey;
         border-radius: $radius;
         overflow: hidden;
+
+        &.tableau{
+
+            display: flex;
+            flex-direction: column;
+            padding: 21px 23px;
+            width: calc(100% - (23px * 2));
+            gap: 16px;
+
+            span{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .footer{
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                @media only screen and (max-width: 1000px){
+                    flex-direction: column;
+                }
+                
+            }
+
+        }
     }
 
     .title{
@@ -342,6 +388,12 @@ p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    &.max{
+        width : 100%;
+        gap : 30px;
+        align-items: stretch;
+    }
 
     @media only screen and (max-width: 1000px){
         flex-direction: column;

@@ -127,7 +127,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className='row' style={{width : "100%", gap : "30px", alignItems: "stretch"}}>
+      <div className='row max'>
         <div className='tile w-100' style={{flexGrow: 1}}>
           <div className='title' style={{width : "100%", justifyContent : "flex-start"}}>
               <span className='logo-inversed'>

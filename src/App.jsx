@@ -6,6 +6,7 @@ import MyActivity from "./pages/my-activity/MyActivity";
 import Header from "./components/header/Header";
 import "./global.scss";
 import PopupManager from "./components/popup_manager/PopupManager";
+import Stacking from "./pages/staking/Stacking";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes >
               <Route path="/" element={<Home />} />
               <Route path="/my-activity" element={<MyActivity />} />
+              <Route path="/Staking-|-Tickets" element={<Stacking />} />
           </Routes>
         </div>
       </div>

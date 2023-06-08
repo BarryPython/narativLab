@@ -25,7 +25,7 @@ export default function PopupManager() {
                         <button className="primary" onClick={()=>{setBetaPopup(false)}}>
                             I understand
                         </button>
-                        <button className="secondary">
+                        <button className="secondary" onClick={()=>{window.location = "/"}}>
                             Read Documentation
                             <GrowArrow/>
                         </button>
