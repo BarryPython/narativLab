@@ -79,7 +79,7 @@ export default function Menu(){
                 <button style={{marginLeft : "31px", height : "37px"}} className="primary fit">Swap</button>
             </div>
         </nav>
-        <button className={subMenu ? "open" : "open active"} onClick={()=>{setSubMenu(!subMenu)}}>
+        <button className={subMenu ? "open desktop-only" : "open active desktop-only"} onClick={()=>{setSubMenu(!subMenu)}}>
                 <Arrow />
         </button>
         </>
