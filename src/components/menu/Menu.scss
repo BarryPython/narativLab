@@ -10,6 +10,33 @@
     margin-bottom: 10px;
 }
 
+.open{
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    background-color: $green;
+    margin-left: 145px;
+    margin-top: 85vh;
+    top: 2px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 150ms;
+
+    svg{
+        transition: all 0.4s ease-in-out;
+        transform: rotate(180deg);
+    }
+
+    &.active{
+        transform: translateX(11.5vw);
+        transition-duration: 0.4s;
+        transition-delay: 0ms;
+        svg{
+            transform: rotate(0deg);
+        }
+    }
+}
+
 nav{
     $padding-w: 30px;
     max-width: calc(280px + (30px));
@@ -161,7 +188,7 @@ nav{
         }
     }
     @media only screen and (min-width: 1000px){
-        &:not(:hover){
+        &.collapsed{
         max-width: calc(133px - ($padding-w * 2));
         justify-content: center;
         align-items: center;

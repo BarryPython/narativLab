@@ -10,6 +10,7 @@ import { ReactComponent as Stat } from "../../assets/stat.svg";
 import { ReactComponent as Moon } from "../../assets/moon.svg";
 import { ReactComponent as Exit } from "../../assets/exit.svg";
 import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
+import { ReactComponent as Arrow } from "../../assets/arrow.svg";
 
 //img
 import arb from "../../assets/arb.png"
@@ -32,8 +33,7 @@ export default function Menu(){
                 <MenuIcon />
             </button>
         </div>
-        <nav className={subMenu ? "collapsed" : ""}
-        >
+        <nav className={subMenu ? "collapsed" : ""}>
             <Logo className="logo"/>
             <div className="link-list">
                 <a className={"link " + (getTitle() === "dashboard" ? "active" : "")} href="/">
@@ -79,6 +79,9 @@ export default function Menu(){
                 <button style={{marginLeft : "31px", height : "37px"}} className="primary fit">Swap</button>
             </div>
         </nav>
+        <button className={subMenu ? "open" : "open active"} onClick={()=>{setSubMenu(!subMenu)}}>
+                <Arrow />
+        </button>
         </>
     )
 }
