@@ -40,11 +40,11 @@ export default function Menu(){
                     <Category />
                     <p>Dashboard</p>
                 </a>
-                <a className={"link " + (getTitle() === "Staking-|-Tickets" ? "active" : "")} href="Staking-|-Tickets">
+                <a className={"link " + (getTitle() === "staking-|-Tickets" ? "active" : "")} href="staking-|-Tickets">
                     <Ticket />
                     <p>Staking / Tickets</p>
                 </a>
-                <a className="link" href="/">
+                <a className={"link " + (getTitle() === "investment" ? "active" : "")} href="investment">
                     <Wallet />
                     <p>Investment</p>
                 </a>

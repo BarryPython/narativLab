@@ -19,7 +19,7 @@ function App() {
           <Routes >
               <Route path="/" element={<Home />} />
               <Route path="/my-activity" element={<MyActivity />} />
-              <Route path="/Staking-|-Tickets" element={<Stacking />} />
+              <Route path="/staking-|-Tickets" element={<Stacking />} />
           </Routes>
         </div>
       </div>
