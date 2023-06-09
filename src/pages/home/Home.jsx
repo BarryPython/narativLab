@@ -4,6 +4,8 @@ import "./Home.scss"
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Line } from 'react-chartjs-2';
 
+import MyActivityWidget from '../../components/my_activity_widget/MyActivityWidget';
+
 //svg
 import { ReactComponent as Info } from "../../assets/info.svg";
 import { ReactComponent as LogoInversed } from "../../assets/logo_inversed.svg";
@@ -19,29 +21,6 @@ function Home() {
   let narativPassOwned = 3
   let floorPrice = 1.44
   let holders = 289
-
-  let activities = [
-    {
-      action : "Claim Profits",
-      amount : "950",
-      status : "pending"
-    },
-    {
-      action : "Claim Profits",
-      amount : "2600",
-      status : "success"
-    },
-    {
-      action : "Investment",
-      amount : "600",
-      status : "success"
-    },
-    {
-      action : "Investment",
-      amount : "600",
-      status : "success"
-    }
-  ]
 
   let options = {
     maintainAspectRatio : false,
@@ -144,32 +123,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className='tile w-100' style={{flexGrow: 1}}>
-          <div className='title large'>
-            <h2>My Activity</h2>
-            <a href='/My-activity'>See all</a>
-          </div>
-          <table className='content stat-content'>
-          <thead>
-            <tr>
-              <th>Action</th>
-              <th>Amount</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {activities.slice(0,3).map((activity)=>{
-              return (
-                <tr key={Math.random()}>
-                  <td>{activity.action}</td>
-                  <td>${activity.amount}</td>
-                  <td className={activity.status}>{activity.status}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-          </table>
-        </div>
+        <MyActivityWidget />
       </div>
     </>
   )

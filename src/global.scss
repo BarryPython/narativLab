@@ -272,6 +272,8 @@ p{
             flex-direction: column;
             padding: 21px 23px;
             width: calc(100% - (23px * 2));
+            flex-grow: 1;
+            justify-content: space-between;
             gap: 16px;
 
             span{
@@ -314,36 +316,6 @@ p{
 
         &.large{
             width: 100%;
-        }
-    }
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    background-color: $white;
-
-    img{
-        width: 100%;
-        object-fit: cover;
-        border-radius: $radius;
-        height: 250px;
-    }
-
-    :nth-child(2){
-        padding: 30px;
-        width: calc(100% - 30px);
-        display: flex;
-        flex-direction: column;
-
-        .detail{
-            display: flex;
-            flex-direction: row;
-
-            div{
-                display: flex;
-                flex-direction: column;
-            }
         }
     }
 }

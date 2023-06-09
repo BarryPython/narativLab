@@ -1,0 +1,77 @@
+@import '../../variables.scss';
+
+.movie-tile{
+    padding: 0 !important;
+    width: 100% !important;
+
+    &.sold-out{
+        img{
+            opacity: 0.5;
+        }
+
+        button{
+            background-color: $red !important;
+            color: white !important;
+            cursor: not-allowed !important;
+        }
+    }
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .detail{
+
+        padding: 30px;
+
+        h3{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        > p{
+            &:nth-child(2){
+                padding: 22px 0;
+                border-bottom: 1px solid #F3F0F1;
+            }
+        }
+
+        > div{
+            display: flex;
+            flex-direction: column;
+
+            > :first-child{
+                margin: 27px 0;
+                display: flex;
+                flex-direction: row;
+
+                justify-content: space-between;
+
+                > div{
+                    display: flex;
+                    flex-direction: column;
+
+                    p{
+                        strong{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 1000px){
+                button{
+                    margin-top: 23px;
+                }
+            }
+        }
+    }
+}

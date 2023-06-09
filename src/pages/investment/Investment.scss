@@ -1,0 +1,15 @@
+.split{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.movies-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 30px;
+    row-gap: 30px;
+
+    @media only screen and (max-width: 1000px){
+        grid-template-columns: repeat(1, auto);
+    }
+}

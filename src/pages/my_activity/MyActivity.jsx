@@ -1,9 +1,11 @@
-import React from 'react'
+import { useState, useEffect } from "react"
 import "./MyActivity.scss"
 
 function Home() {
 
-  let activities =[
+  const [activities, setActivities] = useState([])
+
+  let placeholder_activities =[
     {
     action: "Claim Profits",
     amount: "950",
@@ -110,6 +112,11 @@ function Home() {
     date: "Sept 3, 2023"
     }
     ]
+
+    useEffect(()=>{
+      //TODO : fetch activities from backend
+      setActivities(placeholder_activities)
+    }, [])
 
   return (
     <section className='tile w-100'>
