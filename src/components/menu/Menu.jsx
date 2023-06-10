@@ -48,7 +48,7 @@ export default function Menu(){
                     <Wallet />
                     <p>Investment</p>
                 </a>
-                <a className="link" href="/">
+                <a className={"link " + (getTitle() === "statistics" ? "active" : "")} href="/statistics">
                     <Stat />
                     <p>Statistics</p>
                 </a>

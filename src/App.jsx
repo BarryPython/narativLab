@@ -10,6 +10,7 @@ import Stacking from "./pages/staking/Stacking";
 import Investment from "./pages/investment/Investment";
 import AllMovies from "./pages/film_investment/FilmInvestment";
 import Movie from "./pages/movie/Movie";
+import Statistics from "./pages/statistics/Statistics";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/investment" element={<Investment />} />
               <Route path="/film-Investment" element={<AllMovies />} />
               <Route path="/movie/:title" element={<Movie />} />
+              <Route path="/statistics" element={<Statistics />} />
           </Routes>
         </div>
       </div>
