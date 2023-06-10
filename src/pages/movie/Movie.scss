@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+
+.movie-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 72% 25%;
+    column-gap: calc(100% - 97%);
+
+    > .tile{
+
+        padding: 43px 51px;
+        width: calc(100% - 102px);
+        gap: 30px;
+
+        h1{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 35px;
+        }
+
+        h2{
+            font-size: 24px;
+        }
+
+        p{
+            font-size: 16px;
+            white-space: pre-wrap;
+
+            &:last-child{
+                font-size: 16px;
+                line-height: 160%;
+            }
+        }
+    }
+
+    .tool-container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        > .tile{
+            .content{
+                width: calc(100% - 40px);
+
+                &.tool{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 19px;
+                    gap: 13px;
+
+                    > div{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 13px;
+
+                        label{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+
+                            &.green{
+                                color: $green;
+                            }
+                        }
+
+                        .input{
+                            display: flex;
+                            flex-direction: row;
+                            border: 1px solid $green;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            width: 75%;
+                            background-color: white;
+
+                            span{
+                                background-color: $green;
+                                width: 45px;
+                                height: 38px;
+
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                font-family: 'Poppins';
+                                font-weight: 500;
+                                font-size: 16px;
+                            }
+
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+
+                            /* Works for Firefox */
+                            input[type="number"] {
+                                -moz-appearance: textfield;
+                            }
+
+                            input{
+                                width: 70%;
+                                margin-left: auto;
+                                height: 38px;
+                                padding: 0;
+                                border: 0;
+                                outline: 0;
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

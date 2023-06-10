@@ -48,9 +48,10 @@ export default function Investment() {
                 </div>
             </div>
             <div className="movies-container">
-                {movies.slice(0,2).map((movie, index)=>{
+                {movies.map((movie, index)=>{
+                    if(index > 1) return null;
                     return(
-                        <MovieTile key={index} movie={movie} width={100}/>
+                        <MovieTile key={index} movie={movie} width={100} url={movie.title.replaceAll(" ","-")}/>
                     )
                 })}
             </div>

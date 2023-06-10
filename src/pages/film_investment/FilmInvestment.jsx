@@ -8,7 +8,7 @@ export default function AllMovies() {
       <div className="movies-container">
         {movies.map((movie, index)=>{
             return(
-                <MovieTile key={index} movie={movie} width={100}/>
+                <MovieTile key={index} movie={movie} width={100} url={movie.title.replaceAll(" ","-")} />
             )
         })}
       </div>

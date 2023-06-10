@@ -44,7 +44,7 @@ export default function Menu(){
                     <Ticket />
                     <p>Staking / Tickets</p>
                 </a>
-                <a className={"link " + ((getTitle() === "investment") || (getTitle() === "film-Investment") ? "active" : "")} href="investment">
+                <a className={"link " + ((getTitle() === "investment") || (getTitle() === "film-Investment") || (window.location.pathname.includes("/movie/"))  ? "active" : "") } href="/investment">
                     <Wallet />
                     <p>Investment</p>
                 </a>

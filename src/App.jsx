@@ -9,6 +9,7 @@ import PopupManager from "./components/popup_manager/PopupManager";
 import Stacking from "./pages/staking/Stacking";
 import Investment from "./pages/investment/Investment";
 import AllMovies from "./pages/film_investment/FilmInvestment";
+import Movie from "./pages/movie/Movie";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/staking-|-Tickets" element={<Stacking />} />
               <Route path="/investment" element={<Investment />} />
               <Route path="/film-Investment" element={<AllMovies />} />
+              <Route path="/movie/:title" element={<Movie />} />
           </Routes>
         </div>
       </div>

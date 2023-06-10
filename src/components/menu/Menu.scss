@@ -19,8 +19,7 @@
     margin-top: 85vh;
     top: 2px;
     left: 0px;
-    transition: all 0.3s ease-in-out;
-    transition-delay: 150ms;
+    transition: all 0.5s ease-in-out;
 
     svg{
         transition: all 0.4s ease-in-out;
@@ -28,9 +27,7 @@
     }
 
     &.active{
-        transform: translateX(11.5vw);
-        transition-duration: 0.4s;
-        transition-delay: 0ms;
+        transform: translateX(180px);
         svg{
             transform: rotate(0deg);
         }
@@ -39,8 +36,9 @@
 
 nav{
     $padding-w: 30px;
-    max-width: calc(280px + (30px));
-    width: calc(280px + (30px));
+    max-width: calc(220px + (30px));
+    width: calc(220px + (30px));
+    min-width: calc(220px + (30px));
     border-radius: calc(2*$radius);
     background-color: $white;
     height: calc(100% - (2* 60px));
@@ -57,6 +55,7 @@ nav{
 
     transition: max-height 0.5s ease-in-out,
                 max-width 0.5s ease-in-out,
+                min-width 0.5s ease-in-out,
                 padding-top 0.5s ease-in-out,
                 padding-bottom 0.5s ease-in-out,
                 transform 0.5s ease-in-out 0.5s
@@ -189,6 +188,7 @@ nav{
     @media only screen and (min-width: 1000px){
         &.collapsed{
         max-width: calc(133px - ($padding-w * 2));
+        min-width: calc(133px - ($padding-w * 2));
         justify-content: center;
         align-items: center;
 

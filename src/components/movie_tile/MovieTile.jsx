@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 //css
 import "./MovieTile.scss"
 
-export default function MovieTile({movie, width=25}){
+export default function MovieTile({movie, width=25, url}){
 
     const [investor, setInvestor] = useState(0)
     const [totalInvested, setTotalInvested] = useState(0)
@@ -21,7 +21,9 @@ export default function MovieTile({movie, width=25}){
     }, [])
 
     return(
-        <div className={"movie-tile tile w-"+width+(percentRaise === 100 ? " sold-out" : "")}>
+        <div className={"movie-tile tile w-"+width+(percentRaise === 100 ? " sold-out" : "")}
+            onClick={()=>{window.location.href = `/movie/${url}`}}
+            >
             <img src={movie.thumbnail} alt={movie.title}/>
             <div className="detail">
                 <h3>{movie.title}</h3>
