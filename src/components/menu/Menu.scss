@@ -8,6 +8,16 @@
     padding: 19px;
     border-radius: 10px;
     margin-bottom: 10px;
+    
+}
+
+body{
+    &.dark{
+        .topBar{
+            background-color: #141414;
+            color: white;
+        }
+    }
 }
 
 .open{

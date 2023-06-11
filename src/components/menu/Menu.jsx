@@ -1,5 +1,6 @@
 import "./Menu.scss";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {DarkModeContext} from '../../context/DarkModeContext';
 
 //svg
 import { ReactComponent as Logo } from "../../assets/logo.svg";
@@ -17,6 +18,7 @@ import arb from "../../assets/arb.png"
 
 export default function Menu(){
 
+    const {darkMode, toggleDarkMode} = useContext(DarkModeContext);
     const [subMenu, setSubMenu] = useState(true);
 
     function getTitle(){
@@ -58,7 +60,7 @@ export default function Menu(){
                     <img src={arb} alt="web3 logo" />
                     <p>ARB</p>
                 </button>
-                <button className="little">
+                <button className="little" onClick={toggleDarkMode}>
                     <Moon />
                 </button>
                 <button className="little">

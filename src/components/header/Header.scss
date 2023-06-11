@@ -40,3 +40,13 @@
     }
 
 }
+
+body{
+    &.dark{
+        .coins-container{
+            > div{
+                background-color: #141414;
+            }
+        }
+    }
+}

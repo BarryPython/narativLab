@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {DarkModeContext} from '../../context/DarkModeContext';
 import "./Home.scss"
 // eslint-disable-next-line
 import { Chart as ChartJS } from 'chart.js/auto'
@@ -15,6 +16,8 @@ import { ReactComponent as Unicorn } from "../../assets/unicorn.svg";
 import card from "../../assets/card.png";
 
 function Home() {
+
+  const {darkMode} = useContext(DarkModeContext);
 
   let nrtSold = 5489.74
   let equivalent = 13504
@@ -55,7 +58,7 @@ function Home() {
       {
         fill : true,
         borderColor : "#7ee48c",
-        backgroundColor : "#c9f7d0",
+        backgroundColor : darkMode? "#7ee48c" : "#c9f7d0",
         label : "lala",
         data : [1,2,4,8,5,5,6,7,5,8,2,0,4,6,11]
       },
@@ -113,7 +116,7 @@ function Home() {
                 <LogoInversed />
               </span>
             <h2>NRT - $2.46</h2>
-            <button className='' style={{marginLeft : "auto", padding : "10px", width: "fit-content"}}>
+            <button className='little' style={{marginLeft : "auto", padding : "10px", width: "fit-content"}}>
               <Unicorn />
             </button>
           </div>

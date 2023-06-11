@@ -371,3 +371,42 @@ p{
         flex-direction: column;
     }
 }
+
+
+body{
+
+    
+    &.dark{
+        background-color: black;
+        color: $white !important;
+
+        nav{
+            background-color: #141414;
+        }
+
+        .tile{
+            background-color: #141414;
+
+            .content{
+                background-color: #252525;
+            }
+        }
+
+        button{
+            
+            &.little{
+                background-color: #252525;
+                color: #F0F3F3;
+
+                p{
+                    color: #F0F3F3;
+                }
+            }
+
+            &.secondary{
+                border-color: #F0F3F3;
+                color: #F0F3F3;
+            }
+        }
+    }
+}

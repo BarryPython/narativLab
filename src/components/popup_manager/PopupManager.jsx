@@ -1,4 +1,4 @@
-import UseLocalStorage from "../../hook/UseLocalStorage";
+import UseSessionStorage from "../../hook/UseSessionStorage";
 import Popup from "./popup/Popup";
 import "./PopupManager.scss"
 
@@ -8,7 +8,7 @@ import { ReactComponent as GrowArrow } from "../../assets/grow_arrow.svg";
 
 export default function PopupManager() {
     
-    const [betaPopup, setBetaPopup] = UseLocalStorage("betaPopup", true)
+    const [betaPopup, setBetaPopup] = UseSessionStorage("betaPopup", true)
     
     return(
         <div>
@@ -27,7 +27,7 @@ export default function PopupManager() {
                         </button>
                         <button className="secondary" onClick={()=>{window.location = "/"}}>
                             Read Documentation
-                            <GrowArrow/>
+                            <GrowArrow style={{marginLeft : "10px"}}/>
                         </button>
                     </div>
                 </div>

@@ -22,3 +22,18 @@
         }
     }
 }
+
+body{
+    &.dark{
+        .popup{
+            .popup-content{
+                background-color: #141414;
+                color: white;
+
+                > div{
+                    background-color: #252525;
+                }
+            }
+        }
+    }
+}
