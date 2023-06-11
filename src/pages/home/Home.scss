@@ -43,6 +43,10 @@
                     font-size: 32px;
                     line-height: 100%;
 
+                    @media only screen and (max-width: 1000px){
+                        font-size: 24px;
+                    }
+
                     &:nth-child(2){
                         font-size: 14px;
                         line-height: 14px;
@@ -77,12 +81,27 @@
     align-items: center;
     gap: 28px;
 
+    @media only screen and (max-width: 1000px){
+        flex-direction: column;
+        width: calc(100% - 64px);
+        height: auto;
+        padding: 32px 32px;
+    }
+
+    
+
     img{
         width: 140px;
         height: 140px;
         border-radius: 8px;
         background-color: white;
         object-fit: scale-down;
+
+        @media only screen and (max-width: 1000px){
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+        }
     }
 
     div{
